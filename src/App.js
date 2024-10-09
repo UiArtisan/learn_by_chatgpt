@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 
 function App() {
-  // State to hold the number of button presses
   const [count, setCount] = useState(0);
 
-  // Function to handle the button click
   function handleClick() {
-    setCount(count + 1); // Increment the count
+    setCount(count + 1);
     console.log("I'm pressed now");
   }
 
-  // Function to clear/reset the count
   function clearCount() {
-    setCount(0); // Reset the count to 0
+    setCount(0);
     console.log("Count has been reset");
   }
 
-  // Inline styles
   const appStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -57,10 +53,8 @@ function App() {
 
   return (
     <div style={appStyle}>
-      {/* Title */}
       <h1 style={titleStyle}>Welcome to My App</h1>
       
-      {/* Press Me Button */}
       <button 
         style={buttonStyle}
         onClick={handleClick}
@@ -69,11 +63,8 @@ function App() {
       >
         Press Me
       </button>
-
-      {/* Counter Display */}
       <p style={counterStyle}>Button pressed: {count} times</p>
 
-      {/* Clear Count Button */}
       <button 
         style={buttonStyle}
         onClick={clearCount}
